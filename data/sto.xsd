@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="ServiceStation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Clients">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Client" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="ContactInformation">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Phone" type="xs:string"/>
+                          <xs:element name="Email" type="xs:string" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:integer" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Vehicles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Vehicle" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="LicensePlate" type="xs:string"/>
+                    <xs:element name="Model" type="xs:string"/>
+                    <xs:element name="OwnerId" type="xs:integer"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:integer" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Requests">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Request" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SubmissionDate" type="xs:date"/>
+                    <xs:element name="Status" type="xs:string"/>
+                    <xs:element name="VehicleId" type="xs:integer"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:integer" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

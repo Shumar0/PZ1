@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+      "*.xml": "xml",
+      "*.xsd": "xml",
+      "*.xslt": "xml"
+    },
+    "xmlTools.format.enabled": true
+  }

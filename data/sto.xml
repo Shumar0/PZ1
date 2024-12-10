@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../transformations/sto.xslt"?>
+<ServiceStation>
+  <Clients>
+    <Client id="1">
+      <Name>Іван Іванов</Name>
+      <ContactInformation>
+        <Phone>+380501234567</Phone>
+        <Email>ivanov@example.com</Email>
+      </ContactInformation>
+    </Client>
+  </Clients>
+  <Vehicles>
+    <Vehicle id="1">
+      <LicensePlate>ABC1234</LicensePlate>
+      <Model>Audi RS6</Model>
+      <OwnerId>1</OwnerId>
+    </Vehicle>
+  </Vehicles>
+  <Requests>
+    <Request id="1">
+      <SubmissionDate>2024-12-09</SubmissionDate>
+      <Status>Pending</Status>
+      <VehicleId>1</VehicleId>
+    </Request>
+  </Requests>
+</ServiceStation>
