@@ -3,6 +3,7 @@
     <xs:element name="AutoService">
         <xs:complexType>
             <xs:sequence>
+                <!-- Сутність Client -->
                 <xs:element name="Client" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:attribute name="id" type="xs:integer" use="required"/>
@@ -13,16 +14,18 @@
                     </xs:complexType>
                 </xs:element>
 
+                <!-- Сутність Car -->
                 <xs:element name="Car" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:attribute name="id" type="xs:integer" use="required"/>
                         <xs:sequence>
-                            <xs:element name="Model" type="xs:string"/>
-                            <xs:element name="LicensePlate" type="xs:string"/>
+                            <xs:element name="Model" type="xs:string" />
+                            <xs:element name="LicensePlate" type="xs:string" minOccurs="0" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
+                <!-- Сутність Order -->
                 <xs:element name="Order" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:attribute name="id" type="xs:integer" use="required"/>
@@ -36,14 +39,22 @@
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="Name" type="xs:string"/>
-                                                    <xs:element name="Price" type="xs:decimal" />
+                                                    <xs:element name="Price" type="xs:decimal">
+                                                        <!-- Обмеження на діапазон -->
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:decimal">
+                                                                <xs:minInclusive value="0"/>
+                                                                <xs:maxInclusive value="5000"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="Status" type="xs:string"/>
+                            <xs:element name="Status" type="xs:string" minOccurs="1"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
