@@ -1,68 +1,74 @@
-<AutoService>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sto_xslt.xsl"?>
+<AutoService xmlns="http://example.com/auto-service">
     <!-- Клієнти -->
-    <Client id="1">
-        <Name>Іван Іванов</Name>
-        <Phone>+380501234567</Phone> <!-- Обов'язковий телефон -->
-    </Client>
-    <Client id="2">
-        <Name>Марія Петрова</Name>
-        <!-- Відсутній телефон (необов'язковий елемент) -->
-    </Client>
-    <Client id="3">
-        <Name>Олександр Смирнов</Name>
-        <Phone>+380671112233</Phone>
-    </Client>
-
+    <Clieents>
+        <Client id="1">
+            <Name>Іван Іванов</Name>
+            <Phone>+380501234567</Phone> <!-- Обов'язковий телефон -->
+        </Client>
+        <Client id="2">
+            <Name>Марія Петрова</Name>
+            <!-- Відсутній телефон (необов'язковий елемент) -->
+        </Client>
+        <Client id="3">
+            <Name>Олександр Смирнов</Name>
+            <Phone>+380671112233</Phone>
+        </Client>
+    </Clieents>
     <!-- Автомобілі -->
-    <Car id="1">
-        <Model>BMW X5</Model>
-        <LicensePlate>AA1234BB</LicensePlate>
-    </Car>
-    <Car id="2">
-        <Model>Audi A6</Model>
-        <LicensePlate>KA5678CC</LicensePlate>
-    </Car>
-    <Car id="3">
-        <Model>Toyota Camry</Model>
-        <!-- Відсутній номерний знак -->
-    </Car>
-
+    <Cars>
+        <Car id="1">
+            <Model>BMW X5</Model>
+            <LicensePlate>AA1234BB</LicensePlate>
+        </Car>
+        <Car id="2">
+            <Model>Audi A6</Model>
+            <LicensePlate>KA5678CC</LicensePlate>
+        </Car>
+        <Car id="3">
+            <Model>Toyota Camry</Model>
+            <!-- Відсутній номерний знак -->
+        </Car>
+    </Cars>
     <!-- Замовлення -->
-    <Order id="1">
-        <ClientId>1</ClientId>
-        <CarId>1</CarId>
-        <Services>
-            <Service>
-                <Name>Заміна масла</Name>
-                <Price>1500</Price> <!-- Ціна в діапазоні 0–5000 -->
-            </Service>
-            <Service>
-                <Name>Діагностика</Name>
-                <Price>500</Price> <!-- Мінімальна ціна -->
-            </Service>
-        </Services>
-        <Status>виконується</Status> <!-- Обов'язковий статус -->
-    </Order>
-    <Order id="2">
-        <ClientId>2</ClientId>
-        <CarId>2</CarId>
-        <Services>
-            <Service>
-                <Name>Ремонт двигуна</Name>
-                <Price>8000</Price> <!-- Ціна поза діапазоном, можливий виняток -->
-            </Service>
-        </Services>
-        <Status>в очікуванні</Status>
-    </Order>
-    <Order id="3">
-        <ClientId>3</ClientId>
-        <CarId>3</CarId>
-        <Services>
-            <Service>
-                <Name>Заміна шин</Name>
-                <Price>2000</Price>
-            </Service>
-        </Services>
-        <!-- Відсутній статус, можливий виняток -->
-    </Order>
+    <Orders>
+        <Order id="1">
+            <ClientId>1</ClientId>
+            <CarId>1</CarId>
+            <Services>
+                <Service>
+                    <Name>Заміна масла</Name>
+                    <Price>1500</Price> <!-- Ціна в діапазоні 0–5000 -->
+                </Service>
+                <Service>
+                    <Name>Діагностика</Name>
+                    <Price>500</Price> <!-- Мінімальна ціна -->
+                </Service>
+            </Services>
+            <Status>в очікуванні</Status> <!-- Обов'язковий статус -->
+        </Order>
+        <Order id="2">
+            <ClientId>2</ClientId>
+            <CarId>2</CarId>
+            <Services>
+                <Service>
+                    <Name>Ремонт двигуна</Name>
+                    <Price>8000</Price> <!-- Ціна поза діапазоном, можливий виняток -->
+                </Service>
+            </Services>
+            <Status>виконується</Status>
+        </Order>
+        <Order id="3">
+            <ClientId>3</ClientId>
+            <CarId>3</CarId>
+            <Services>
+                <Service>
+                    <Name>Заміна шин</Name>
+                    <Price>2000</Price>
+                </Service>
+            </Services>
+            <!-- Відсутній статус, можливий виняток -->
+        </Order>
+    </Orders>
 </AutoService>
