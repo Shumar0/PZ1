@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:auto="http://example.com/auto-service"
                 exclude-result-prefixes="auto"
@@ -23,7 +22,7 @@
                         <th>Ім'я</th>
                         <th>Телефон</th>
                     </tr>
-                    <xsl:apply-templates select="auto:AutoService/auto:Clieents/auto:Client"/>
+                    <xsl:apply-templates select="auto:AutoService/auto:Clients/auto:Client"/>
                 </table>
                 
                 <h1>Автомобілі</h1>

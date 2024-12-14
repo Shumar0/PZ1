@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="sto_xslt.xsl"?>
 <AutoService xmlns="http://example.com/auto-service">
     <!-- Клієнти -->
-    <Clieents>
+    <Clients>
         <Client id="1">
             <Name>Іван Іванов</Name>
             <Phone>+380501234567</Phone> <!-- Обов'язковий телефон -->
@@ -15,7 +15,7 @@
             <Name>Олександр Смирнов</Name>
             <Phone>+380671112233</Phone>
         </Client>
-    </Clieents>
+    </Clients>
     <!-- Автомобілі -->
     <Cars>
         <Car id="1">
