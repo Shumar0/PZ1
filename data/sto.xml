@@ -5,17 +5,17 @@
     <Clients>
         <Client id="1">
             <Name>Іван Іванов</Name>
-            <Phone>+380501234567</Phone> <!-- Обов'язковий телефон -->
+            <Phone>+380501234567</Phone>
         </Client>
         <Client id="2">
             <Name>Марія Петрова</Name>
-            <!-- Відсутній телефон (необов'язковий елемент) -->
         </Client>
         <Client id="3">
             <Name>Олександр Смирнов</Name>
             <Phone>+380671112233</Phone>
         </Client>
     </Clients>
+
     <!-- Автомобілі -->
     <Cars>
         <Car id="1">
@@ -28,9 +28,9 @@
         </Car>
         <Car id="3">
             <Model>Toyota Camry</Model>
-            <!-- Відсутній номерний знак -->
         </Car>
     </Cars>
+
     <!-- Замовлення -->
     <Orders>
         <Order id="1">
@@ -39,14 +39,14 @@
             <Services>
                 <Service>
                     <Name>Заміна масла</Name>
-                    <Price>1500</Price> <!-- Ціна в діапазоні 0–5000 -->
+                    <Price>1500</Price>
                 </Service>
                 <Service>
                     <Name>Діагностика</Name>
-                    <Price>500</Price> <!-- Мінімальна ціна -->
+                    <Price>500</Price>
                 </Service>
             </Services>
-            <Status>в очікуванні</Status> <!-- Обов'язковий статус -->
+            <Status>в очікуванні</Status>
         </Order>
         <Order id="2">
             <ClientId>2</ClientId>
@@ -54,7 +54,7 @@
             <Services>
                 <Service>
                     <Name>Ремонт двигуна</Name>
-                    <Price>8000</Price> <!-- Ціна поза діапазоном, можливий виняток -->
+                    <Price>5000</Price>
                 </Service>
             </Services>
             <Status>виконується</Status>
@@ -68,7 +68,7 @@
                     <Price>2000</Price>
                 </Service>
             </Services>
-            <!-- Відсутній статус, можливий виняток -->
+            <Status>завершено</Status>
         </Order>
     </Orders>
 </AutoService>

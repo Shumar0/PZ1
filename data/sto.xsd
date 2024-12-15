@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://example.com/auto-service"
            xmlns="http://example.com/auto-service"
@@ -6,47 +7,47 @@
     <xs:element name="AutoService">
         <xs:complexType>
             <xs:sequence>
-                <!-- Контейнер для клієнтів -->
+                <!-- Сутність Clients, яка містить кілька клієнтів -->
                 <xs:element name="Clients">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="Client" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:attribute name="id" type="xs:integer" use="required"/>
                                     <xs:sequence>
-                                        <xs:element name="Name" type="xs:string"/>
-                                        <xs:element name="Phone" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="Name" type="xs:string" />
+                                        <xs:element name="Phone" type="xs:string" minOccurs="0" />
                                     </xs:sequence>
+                                    <!-- Додаємо атрибут id -->
+                                    <xs:attribute name="id" type="xs:integer" use="required"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
-                <!-- Контейнер для автомобілів -->
+                <!-- Сутність Car -->
                 <xs:element name="Cars">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="Car" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:attribute name="id" type="xs:integer" use="required"/>
                                     <xs:sequence>
-                                        <xs:element name="Model" type="xs:string"/>
-                                        <xs:element name="LicensePlate" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="Model" type="xs:string" />
+                                        <xs:element name="LicensePlate" type="xs:string" minOccurs="0" />
                                     </xs:sequence>
+                                    <xs:attribute name="id" type="xs:integer" use="required"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
-                <!-- Контейнер для замовлень -->
+                <!-- Сутність Order -->
                 <xs:element name="Orders">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="Order" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:attribute name="id" type="xs:integer" use="required"/>
                                     <xs:sequence>
                                         <xs:element name="ClientId" type="xs:integer"/>
                                         <xs:element name="CarId" type="xs:integer"/>
@@ -57,7 +58,7 @@
                                                         <xs:complexType>
                                                             <xs:sequence>
                                                                 <xs:element name="Name" type="xs:string"/>
-                                                                <xs:element name="Price" type="xs:decimal">
+                                                                <xs:element name="Price">
                                                                     <xs:simpleType>
                                                                         <xs:restriction base="xs:decimal">
                                                                             <xs:minInclusive value="0"/>
@@ -73,6 +74,7 @@
                                         </xs:element>
                                         <xs:element name="Status" type="xs:string" minOccurs="1"/>
                                     </xs:sequence>
+                                    <xs:attribute name="id" type="xs:integer" use="required"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
