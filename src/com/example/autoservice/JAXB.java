@@ -5,12 +5,12 @@ import javax.xml.validation.SchemaFactory;
 import java.io.File;
 
 
-public class JAXBParser {
+public class JAXB {
 
     public static void main(String[] args) throws Exception {
         // Вказуємо шлях до XML та XSD файлів
-        File xmlFile = new File("D:\\Study\\fourth year\\Internet technologies of distributed information processing\\Code\\PZ3\\data\\sto.xml");
-        File xsdFile = new File("D:\\Study\\fourth year\\Internet technologies of distributed information processing\\Code\\PZ3\\data\\sto.xsd");
+        File xmlFile = new File("D:\\Study\\fourth year\\Internet technologies of distributed information processing\\Code\\LB3\\sto.xml");
+        File xsdFile = new File("D:\\Study\\fourth year\\Internet technologies of distributed information processing\\Code\\LB3\\sto.xsd");
 
         // Створюємо контекст JAXB для всіх класів, що згенеровані з XSD (повинні бути у вашому проекті)
         JAXBContext context = JAXBContext.newInstance(com.example.autoservice.ObjectFactory.class);

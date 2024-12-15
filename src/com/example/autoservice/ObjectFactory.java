@@ -46,53 +46,83 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AutoService.Order }
+     * Create an instance of {@link AutoService.Orders }
      * 
      * @return
-     *     the new instance of {@link AutoService.Order }
+     *     the new instance of {@link AutoService.Orders }
      */
-    public AutoService.Order createAutoServiceOrder() {
-        return new AutoService.Order();
+    public AutoService.Orders createAutoServiceOrders() {
+        return new AutoService.Orders();
     }
 
     /**
-     * Create an instance of {@link AutoService.Order.Services }
+     * Create an instance of {@link AutoService.Orders.Order }
      * 
      * @return
-     *     the new instance of {@link AutoService.Order.Services }
+     *     the new instance of {@link AutoService.Orders.Order }
      */
-    public AutoService.Order.Services createAutoServiceOrderServices() {
-        return new AutoService.Order.Services();
+    public AutoService.Orders.Order createAutoServiceOrdersOrder() {
+        return new AutoService.Orders.Order();
     }
 
     /**
-     * Create an instance of {@link AutoService.Client }
+     * Create an instance of {@link AutoService.Orders.Order.Services }
      * 
      * @return
-     *     the new instance of {@link AutoService.Client }
+     *     the new instance of {@link AutoService.Orders.Order.Services }
      */
-    public AutoService.Client createAutoServiceClient() {
-        return new AutoService.Client();
+    public AutoService.Orders.Order.Services createAutoServiceOrdersOrderServices() {
+        return new AutoService.Orders.Order.Services();
     }
 
     /**
-     * Create an instance of {@link AutoService.Car }
+     * Create an instance of {@link AutoService.Cars }
      * 
      * @return
-     *     the new instance of {@link AutoService.Car }
+     *     the new instance of {@link AutoService.Cars }
      */
-    public AutoService.Car createAutoServiceCar() {
-        return new AutoService.Car();
+    public AutoService.Cars createAutoServiceCars() {
+        return new AutoService.Cars();
     }
 
     /**
-     * Create an instance of {@link AutoService.Order.Services.Service }
+     * Create an instance of {@link AutoService.Clients }
      * 
      * @return
-     *     the new instance of {@link AutoService.Order.Services.Service }
+     *     the new instance of {@link AutoService.Clients }
      */
-    public AutoService.Order.Services.Service createAutoServiceOrderServicesService() {
-        return new AutoService.Order.Services.Service();
+    public AutoService.Clients createAutoServiceClients() {
+        return new AutoService.Clients();
+    }
+
+    /**
+     * Create an instance of {@link AutoService.Orders.Order.Services.Service }
+     * 
+     * @return
+     *     the new instance of {@link AutoService.Orders.Order.Services.Service }
+     */
+    public AutoService.Orders.Order.Services.Service createAutoServiceOrdersOrderServicesService() {
+        return new AutoService.Orders.Order.Services.Service();
+    }
+
+    /**
+     * Create an instance of {@link AutoService.Cars.Car }
+     * 
+     * @return
+     *     the new instance of {@link AutoService.Cars.Car }
+     */
+    public AutoService.Cars.Car createAutoServiceCarsCar() {
+        return new AutoService.Cars.Car();
+    }
+
+    /**
+     * Create an instance of {@link AutoService.Clients.Client }
+     * 
+     * @return
+     *     the new instance of {@link AutoService.Clients.Client }
+     */
+    public AutoService.Clients.Client createAutoServiceClientsClient() {
+        return new AutoService.Clients.Client();
     }
 
 }

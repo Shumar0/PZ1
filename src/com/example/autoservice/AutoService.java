@@ -19,7 +19,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
-
 /**
  * <p>Java class for anonymous complex type</p>.
  * 
@@ -30,70 +29,101 @@ import javax.xml.bind.annotation.XmlType;
  *   <complexContent>
  *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       <sequence>
- *         <element name="Client" maxOccurs="unbounded">
+ *         <element name="Clients">
  *           <complexType>
  *             <complexContent>
  *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 <sequence>
- *                   <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   <element name="Phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                 </sequence>
- *               </restriction>
- *             </complexContent>
- *           </complexType>
- *         </element>
- *         <element name="Car" maxOccurs="unbounded">
- *           <complexType>
- *             <complexContent>
- *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 <sequence>
- *                   <element name="Model" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   <element name="LicensePlate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                 </sequence>
- *                 <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *               </restriction>
- *             </complexContent>
- *           </complexType>
- *         </element>
- *         <element name="Order" maxOccurs="unbounded">
- *           <complexType>
- *             <complexContent>
- *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 <sequence>
- *                   <element name="ClientId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
- *                   <element name="CarId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
- *                   <element name="Services">
+ *                   <element name="Client" maxOccurs="unbounded">
  *                     <complexType>
  *                       <complexContent>
  *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                           <sequence>
- *                             <element name="Service" maxOccurs="unbounded">
+ *                             <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                             <element name="Phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *                           </sequence>
+ *                           <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *                         </restriction>
+ *                       </complexContent>
+ *                     </complexType>
+ *                   </element>
+ *                 </sequence>
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *         <element name="Cars">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <sequence>
+ *                   <element name="Car" maxOccurs="unbounded">
+ *                     <complexType>
+ *                       <complexContent>
+ *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           <sequence>
+ *                             <element name="Model" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                             <element name="LicensePlate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *                           </sequence>
+ *                           <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *                         </restriction>
+ *                       </complexContent>
+ *                     </complexType>
+ *                   </element>
+ *                 </sequence>
+ *               </restriction>
+ *             </complexContent>
+ *           </complexType>
+ *         </element>
+ *         <element name="Orders">
+ *           <complexType>
+ *             <complexContent>
+ *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 <sequence>
+ *                   <element name="Order" maxOccurs="unbounded">
+ *                     <complexType>
+ *                       <complexContent>
+ *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           <sequence>
+ *                             <element name="ClientId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+ *                             <element name="CarId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+ *                             <element name="Services">
  *                               <complexType>
  *                                 <complexContent>
  *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                                     <sequence>
- *                                       <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                                       <element name="Price">
- *                                         <simpleType>
- *                                           <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
- *                                             <minInclusive value="0"/>
- *                                             <maxInclusive value="5000"/>
- *                                           </restriction>
- *                                         </simpleType>
+ *                                       <element name="Service" maxOccurs="unbounded">
+ *                                         <complexType>
+ *                                           <complexContent>
+ *                                             <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                               <sequence>
+ *                                                 <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                                                 <element name="Price">
+ *                                                   <simpleType>
+ *                                                     <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+ *                                                       <minInclusive value="0"/>
+ *                                                       <maxInclusive value="5000"/>
+ *                                                     </restriction>
+ *                                                   </simpleType>
+ *                                                 </element>
+ *                                               </sequence>
+ *                                             </restriction>
+ *                                           </complexContent>
+ *                                         </complexType>
  *                                       </element>
  *                                     </sequence>
  *                                   </restriction>
  *                                 </complexContent>
  *                               </complexType>
  *                             </element>
+ *                             <element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *                           </sequence>
+ *                           <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
  *                         </restriction>
  *                       </complexContent>
  *                     </complexType>
  *                   </element>
- *                   <element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *                 </sequence>
- *                 <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
  *               </restriction>
  *             </complexContent>
  *           </complexType>
@@ -108,114 +138,90 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "client",
-    "car",
-    "order"
+    "clients",
+    "cars",
+    "orders"
 })
 @XmlRootElement(name = "AutoService")
 public class AutoService {
 
-    @XmlElement(name = "Client", required = true)
-    protected List<AutoService.Client> client;
-    @XmlElement(name = "Car", required = true)
-    protected List<AutoService.Car> car;
-    @XmlElement(name = "Order", required = true)
-    protected List<AutoService.Order> order;
+    @XmlElement(name = "Clients", required = true)
+    protected AutoService.Clients clients;
+    @XmlElement(name = "Cars", required = true)
+    protected AutoService.Cars cars;
+    @XmlElement(name = "Orders", required = true)
+    protected AutoService.Orders orders;
 
     /**
-     * Gets the value of the client property.
-     * 
-     * <p>This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the client property.</p>
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getClient().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link AutoService.Client }
-     * </p>
-     * 
+     * Gets the value of the clients property.
      * 
      * @return
-     *     The value of the client property.
+     *     possible object is
+     *     {@link AutoService.Clients }
+     *     
      */
-    public List<AutoService.Client> getClient() {
-        if (client == null) {
-            client = new ArrayList<>();
-        }
-        return this.client;
+    public AutoService.Clients getClients() {
+        return clients;
     }
 
     /**
-     * Gets the value of the car property.
+     * Sets the value of the clients property.
      * 
-     * <p>This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the car property.</p>
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getCar().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link AutoService.Car }
-     * </p>
-     * 
-     * 
-     * @return
-     *     The value of the car property.
+     * @param value
+     *     allowed object is
+     *     {@link AutoService.Clients }
+     *     
      */
-    public List<AutoService.Car> getCar() {
-        if (car == null) {
-            car = new ArrayList<>();
-        }
-        return this.car;
+    public void setClients(AutoService.Clients value) {
+        this.clients = value;
     }
 
     /**
-     * Gets the value of the order property.
-     * 
-     * <p>This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the order property.</p>
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * </p>
-     * <pre>
-     * getOrder().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link AutoService.Order }
-     * </p>
-     * 
+     * Gets the value of the cars property.
      * 
      * @return
-     *     The value of the order property.
+     *     possible object is
+     *     {@link AutoService.Cars }
+     *     
      */
-    public List<AutoService.Order> getOrder() {
-        if (order == null) {
-            order = new ArrayList<>();
-        }
-        return this.order;
+    public AutoService.Cars getCars() {
+        return cars;
+    }
+
+    /**
+     * Sets the value of the cars property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AutoService.Cars }
+     *     
+     */
+    public void setCars(AutoService.Cars value) {
+        this.cars = value;
+    }
+
+    /**
+     * Gets the value of the orders property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AutoService.Orders }
+     *     
+     */
+    public AutoService.Orders getOrders() {
+        return orders;
+    }
+
+    /**
+     * Sets the value of the orders property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AutoService.Orders }
+     *     
+     */
+    public void setOrders(AutoService.Orders value) {
+        this.orders = value;
     }
 
 
@@ -229,233 +235,20 @@ public class AutoService {
      *   <complexContent>
      *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       <sequence>
-     *         <element name="Model" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         <element name="LicensePlate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *       </sequence>
-     *       <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *     </restriction>
-     *   </complexContent>
-     * </complexType>
-     * }</pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "model",
-        "licensePlate"
-    })
-    public static class Car {
-
-        @XmlElement(name = "Model", required = true)
-        protected String model;
-        @XmlElement(name = "LicensePlate")
-        protected String licensePlate;
-        @XmlAttribute(name = "id", required = true)
-        protected BigInteger id;
-
-        /**
-         * Gets the value of the model property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getModel() {
-            return model;
-        }
-
-        /**
-         * Sets the value of the model property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setModel(String value) {
-            this.model = value;
-        }
-
-        /**
-         * Gets the value of the licensePlate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getLicensePlate() {
-            return licensePlate;
-        }
-
-        /**
-         * Sets the value of the licensePlate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setLicensePlate(String value) {
-            this.licensePlate = value;
-        }
-
-        /**
-         * Gets the value of the id property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
-         */
-        public BigInteger getId() {
-            return id;
-        }
-
-        /**
-         * Sets the value of the id property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
-         */
-        public void setId(BigInteger value) {
-            this.id = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type</p>.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.</p>
-     * 
-     * <pre>{@code
-     * <complexType>
-     *   <complexContent>
-     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       <sequence>
-     *         <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         <element name="Phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *       </sequence>
-     *     </restriction>
-     *   </complexContent>
-     * </complexType>
-     * }</pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "name",
-        "phone"
-    })
-    public static class Client {
-
-        @XmlElement(name = "Name", required = true)
-        protected String name;
-        @XmlElement(name = "Phone")
-        protected String phone;
-
-        /**
-         * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getName() {
-            return name;
-        }
-
-        /**
-         * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setName(String value) {
-            this.name = value;
-        }
-
-        /**
-         * Gets the value of the phone property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getPhone() {
-            return phone;
-        }
-
-        /**
-         * Sets the value of the phone property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setPhone(String value) {
-            this.phone = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type</p>.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.</p>
-     * 
-     * <pre>{@code
-     * <complexType>
-     *   <complexContent>
-     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       <sequence>
-     *         <element name="ClientId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
-     *         <element name="CarId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
-     *         <element name="Services">
+     *         <element name="Car" maxOccurs="unbounded">
      *           <complexType>
      *             <complexContent>
      *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *                 <sequence>
-     *                   <element name="Service" maxOccurs="unbounded">
-     *                     <complexType>
-     *                       <complexContent>
-     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           <sequence>
-     *                             <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                             <element name="Price">
-     *                               <simpleType>
-     *                                 <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
-     *                                   <minInclusive value="0"/>
-     *                                   <maxInclusive value="5000"/>
-     *                                 </restriction>
-     *                               </simpleType>
-     *                             </element>
-     *                           </sequence>
-     *                         </restriction>
-     *                       </complexContent>
-     *                     </complexType>
-     *                   </element>
+     *                   <element name="Model" type="{http://www.w3.org/2001/XMLSchema}string"/>
+     *                   <element name="LicensePlate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
      *                 </sequence>
+     *                 <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
      *               </restriction>
      *             </complexContent>
      *           </complexType>
      *         </element>
-     *         <element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
      *       </sequence>
-     *       <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
      *     </restriction>
      *   </complexContent>
      * </complexType>
@@ -465,142 +258,43 @@ public class AutoService {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "clientId",
-        "carId",
-        "services",
-        "status"
+        "car"
     })
-    public static class Order {
+    public static class Cars {
 
-        @XmlElement(name = "ClientId", required = true)
-        protected BigInteger clientId;
-        @XmlElement(name = "CarId", required = true)
-        protected BigInteger carId;
-        @XmlElement(name = "Services", required = true)
-        protected AutoService.Order.Services services;
-        @XmlElement(name = "Status", required = true)
-        protected String status;
-        @XmlAttribute(name = "id", required = true)
-        protected BigInteger id;
+        @XmlElement(name = "Car", required = true)
+        protected List<AutoService.Cars.Car> car;
 
         /**
-         * Gets the value of the clientId property.
+         * Gets the value of the car property.
+         * 
+         * <p>This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the car property.</p>
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * </p>
+         * <pre>
+         * getCar().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link AutoService.Cars.Car }
+         * </p>
+         * 
          * 
          * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
+         *     The value of the car property.
          */
-        public BigInteger getClientId() {
-            return clientId;
-        }
-
-        /**
-         * Sets the value of the clientId property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
-         */
-        public void setClientId(BigInteger value) {
-            this.clientId = value;
-        }
-
-        /**
-         * Gets the value of the carId property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
-         */
-        public BigInteger getCarId() {
-            return carId;
-        }
-
-        /**
-         * Sets the value of the carId property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
-         */
-        public void setCarId(BigInteger value) {
-            this.carId = value;
-        }
-
-        /**
-         * Gets the value of the services property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link AutoService.Order.Services }
-         *     
-         */
-        public AutoService.Order.Services getServices() {
-            return services;
-        }
-
-        /**
-         * Sets the value of the services property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link AutoService.Order.Services }
-         *     
-         */
-        public void setServices(AutoService.Order.Services value) {
-            this.services = value;
-        }
-
-        /**
-         * Gets the value of the status property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getStatus() {
-            return status;
-        }
-
-        /**
-         * Sets the value of the status property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setStatus(String value) {
-            this.status = value;
-        }
-
-        /**
-         * Gets the value of the id property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
-         */
-        public BigInteger getId() {
-            return id;
-        }
-
-        /**
-         * Sets the value of the id property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
-         */
-        public void setId(BigInteger value) {
-            this.id = value;
+        public List<AutoService.Cars.Car> getCar() {
+            if (car == null) {
+                car = new ArrayList<>();
+            }
+            return this.car;
         }
 
 
@@ -614,26 +308,10 @@ public class AutoService {
          *   <complexContent>
          *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       <sequence>
-         *         <element name="Service" maxOccurs="unbounded">
-         *           <complexType>
-         *             <complexContent>
-         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 <sequence>
-         *                   <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *                   <element name="Price">
-         *                     <simpleType>
-         *                       <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
-         *                         <minInclusive value="0"/>
-         *                         <maxInclusive value="5000"/>
-         *                       </restriction>
-         *                     </simpleType>
-         *                   </element>
-         *                 </sequence>
-         *               </restriction>
-         *             </complexContent>
-         *           </complexType>
-         *         </element>
+         *         <element name="Model" type="{http://www.w3.org/2001/XMLSchema}string"/>
+         *         <element name="LicensePlate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
          *       </sequence>
+         *       <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
          *     </restriction>
          *   </complexContent>
          * </complexType>
@@ -643,43 +321,572 @@ public class AutoService {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "service"
+            "model",
+            "licensePlate"
         })
-        public static class Services {
+        public static class Car {
 
-            @XmlElement(name = "Service", required = true)
-            protected List<AutoService.Order.Services.Service> service;
+            @XmlElement(name = "Model", required = true)
+            protected String model;
+            @XmlElement(name = "LicensePlate")
+            protected String licensePlate;
+            @XmlAttribute(name = "id", required = true)
+            protected BigInteger id;
 
             /**
-             * Gets the value of the service property.
-             * 
-             * <p>This accessor method returns a reference to the live list,
-             * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the JAXB object.
-             * This is why there is not a <CODE>set</CODE> method for the service property.</p>
-             * 
-             * <p>
-             * For example, to add a new item, do as follows:
-             * </p>
-             * <pre>
-             * getService().add(newItem);
-             * </pre>
-             * 
-             * 
-             * <p>
-             * Objects of the following type(s) are allowed in the list
-             * {@link AutoService.Order.Services.Service }
-             * </p>
-             * 
+             * Gets the value of the model property.
              * 
              * @return
-             *     The value of the service property.
+             *     possible object is
+             *     {@link String }
+             *     
              */
-            public List<AutoService.Order.Services.Service> getService() {
-                if (service == null) {
-                    service = new ArrayList<>();
-                }
-                return this.service;
+            public String getModel() {
+                return model;
+            }
+
+            /**
+             * Sets the value of the model property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setModel(String value) {
+                this.model = value;
+            }
+
+            /**
+             * Gets the value of the licensePlate property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getLicensePlate() {
+                return licensePlate;
+            }
+
+            /**
+             * Sets the value of the licensePlate property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setLicensePlate(String value) {
+                this.licensePlate = value;
+            }
+
+            /**
+             * Gets the value of the id property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigInteger }
+             *     
+             */
+            public BigInteger getId() {
+                return id;
+            }
+
+            /**
+             * Sets the value of the id property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigInteger }
+             *     
+             */
+            public void setId(BigInteger value) {
+                this.id = value;
+            }
+
+        }
+
+    }
+
+
+    /**
+     * <p>Java class for anonymous complex type</p>.
+     * 
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
+     * 
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       <sequence>
+     *         <element name="Client" maxOccurs="unbounded">
+     *           <complexType>
+     *             <complexContent>
+     *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 <sequence>
+     *                   <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+     *                   <element name="Phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+     *                 </sequence>
+     *                 <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+     *               </restriction>
+     *             </complexContent>
+     *           </complexType>
+     *         </element>
+     *       </sequence>
+     *     </restriction>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "client"
+    })
+    public static class Clients {
+
+        @XmlElement(name = "Client", required = true)
+        protected List<AutoService.Clients.Client> client;
+
+        /**
+         * Gets the value of the client property.
+         * 
+         * <p>This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the client property.</p>
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * </p>
+         * <pre>
+         * getClient().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link AutoService.Clients.Client }
+         * </p>
+         * 
+         * 
+         * @return
+         *     The value of the client property.
+         */
+        public List<AutoService.Clients.Client> getClient() {
+            if (client == null) {
+                client = new ArrayList<>();
+            }
+            return this.client;
+        }
+
+
+        /**
+         * <p>Java class for anonymous complex type</p>.
+         * 
+         * <p>The following schema fragment specifies the expected content contained within this class.</p>
+         * 
+         * <pre>{@code
+         * <complexType>
+         *   <complexContent>
+         *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       <sequence>
+         *         <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+         *         <element name="Phone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+         *       </sequence>
+         *       <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+         *     </restriction>
+         *   </complexContent>
+         * </complexType>
+         * }</pre>
+         * 
+         * 
+         */
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "", propOrder = {
+            "name",
+            "phone"
+        })
+        public static class Client {
+
+            @XmlElement(name = "Name", required = true)
+            protected String name;
+            @XmlElement(name = "Phone")
+            protected String phone;
+            @XmlAttribute(name = "id", required = true)
+            protected BigInteger id;
+
+            /**
+             * Gets the value of the name property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getName() {
+                return name;
+            }
+
+            /**
+             * Sets the value of the name property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setName(String value) {
+                this.name = value;
+            }
+
+            /**
+             * Gets the value of the phone property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getPhone() {
+                return phone;
+            }
+
+            /**
+             * Sets the value of the phone property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setPhone(String value) {
+                this.phone = value;
+            }
+
+            /**
+             * Gets the value of the id property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigInteger }
+             *     
+             */
+            public BigInteger getId() {
+                return id;
+            }
+
+            /**
+             * Sets the value of the id property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigInteger }
+             *     
+             */
+            public void setId(BigInteger value) {
+                this.id = value;
+            }
+
+        }
+
+    }
+
+
+    /**
+     * <p>Java class for anonymous complex type</p>.
+     * 
+     * <p>The following schema fragment specifies the expected content contained within this class.</p>
+     * 
+     * <pre>{@code
+     * <complexType>
+     *   <complexContent>
+     *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       <sequence>
+     *         <element name="Order" maxOccurs="unbounded">
+     *           <complexType>
+     *             <complexContent>
+     *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 <sequence>
+     *                   <element name="ClientId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+     *                   <element name="CarId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+     *                   <element name="Services">
+     *                     <complexType>
+     *                       <complexContent>
+     *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           <sequence>
+     *                             <element name="Service" maxOccurs="unbounded">
+     *                               <complexType>
+     *                                 <complexContent>
+     *                                   <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                                     <sequence>
+     *                                       <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+     *                                       <element name="Price">
+     *                                         <simpleType>
+     *                                           <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+     *                                             <minInclusive value="0"/>
+     *                                             <maxInclusive value="5000"/>
+     *                                           </restriction>
+     *                                         </simpleType>
+     *                                       </element>
+     *                                     </sequence>
+     *                                   </restriction>
+     *                                 </complexContent>
+     *                               </complexType>
+     *                             </element>
+     *                           </sequence>
+     *                         </restriction>
+     *                       </complexContent>
+     *                     </complexType>
+     *                   </element>
+     *                   <element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
+     *                 </sequence>
+     *                 <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+     *               </restriction>
+     *             </complexContent>
+     *           </complexType>
+     *         </element>
+     *       </sequence>
+     *     </restriction>
+     *   </complexContent>
+     * </complexType>
+     * }</pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "order"
+    })
+    public static class Orders {
+
+        @XmlElement(name = "Order", required = true)
+        protected List<AutoService.Orders.Order> order;
+
+        /**
+         * Gets the value of the order property.
+         * 
+         * <p>This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the order property.</p>
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * </p>
+         * <pre>
+         * getOrder().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link AutoService.Orders.Order }
+         * </p>
+         * 
+         * 
+         * @return
+         *     The value of the order property.
+         */
+        public List<AutoService.Orders.Order> getOrder() {
+            if (order == null) {
+                order = new ArrayList<>();
+            }
+            return this.order;
+        }
+
+
+        /**
+         * <p>Java class for anonymous complex type</p>.
+         * 
+         * <p>The following schema fragment specifies the expected content contained within this class.</p>
+         * 
+         * <pre>{@code
+         * <complexType>
+         *   <complexContent>
+         *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       <sequence>
+         *         <element name="ClientId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+         *         <element name="CarId" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+         *         <element name="Services">
+         *           <complexType>
+         *             <complexContent>
+         *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 <sequence>
+         *                   <element name="Service" maxOccurs="unbounded">
+         *                     <complexType>
+         *                       <complexContent>
+         *                         <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                           <sequence>
+         *                             <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+         *                             <element name="Price">
+         *                               <simpleType>
+         *                                 <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+         *                                   <minInclusive value="0"/>
+         *                                   <maxInclusive value="5000"/>
+         *                                 </restriction>
+         *                               </simpleType>
+         *                             </element>
+         *                           </sequence>
+         *                         </restriction>
+         *                       </complexContent>
+         *                     </complexType>
+         *                   </element>
+         *                 </sequence>
+         *               </restriction>
+         *             </complexContent>
+         *           </complexType>
+         *         </element>
+         *         <element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
+         *       </sequence>
+         *       <attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
+         *     </restriction>
+         *   </complexContent>
+         * </complexType>
+         * }</pre>
+         * 
+         * 
+         */
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "", propOrder = {
+            "clientId",
+            "carId",
+            "services",
+            "status"
+        })
+        public static class Order {
+
+            @XmlElement(name = "ClientId", required = true)
+            protected BigInteger clientId;
+            @XmlElement(name = "CarId", required = true)
+            protected BigInteger carId;
+            @XmlElement(name = "Services", required = true)
+            protected AutoService.Orders.Order.Services services;
+            @XmlElement(name = "Status", required = true)
+            protected String status;
+            @XmlAttribute(name = "id", required = true)
+            protected BigInteger id;
+
+            /**
+             * Gets the value of the clientId property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigInteger }
+             *     
+             */
+            public BigInteger getClientId() {
+                return clientId;
+            }
+
+            /**
+             * Sets the value of the clientId property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigInteger }
+             *     
+             */
+            public void setClientId(BigInteger value) {
+                this.clientId = value;
+            }
+
+            /**
+             * Gets the value of the carId property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigInteger }
+             *     
+             */
+            public BigInteger getCarId() {
+                return carId;
+            }
+
+            /**
+             * Sets the value of the carId property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigInteger }
+             *     
+             */
+            public void setCarId(BigInteger value) {
+                this.carId = value;
+            }
+
+            /**
+             * Gets the value of the services property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link AutoService.Orders.Order.Services }
+             *     
+             */
+            public AutoService.Orders.Order.Services getServices() {
+                return services;
+            }
+
+            /**
+             * Sets the value of the services property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link AutoService.Orders.Order.Services }
+             *     
+             */
+            public void setServices(AutoService.Orders.Order.Services value) {
+                this.services = value;
+            }
+
+            /**
+             * Gets the value of the status property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
+             */
+            public String getStatus() {
+                return status;
+            }
+
+            /**
+             * Sets the value of the status property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
+             */
+            public void setStatus(String value) {
+                this.status = value;
+            }
+
+            /**
+             * Gets the value of the id property.
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigInteger }
+             *     
+             */
+            public BigInteger getId() {
+                return id;
+            }
+
+            /**
+             * Sets the value of the id property.
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigInteger }
+             *     
+             */
+            public void setId(BigInteger value) {
+                this.id = value;
             }
 
 
@@ -693,14 +900,24 @@ public class AutoService {
              *   <complexContent>
              *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
              *       <sequence>
-             *         <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
-             *         <element name="Price">
-             *           <simpleType>
-             *             <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
-             *               <minInclusive value="0"/>
-             *               <maxInclusive value="5000"/>
-             *             </restriction>
-             *           </simpleType>
+             *         <element name="Service" maxOccurs="unbounded">
+             *           <complexType>
+             *             <complexContent>
+             *               <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *                 <sequence>
+             *                   <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+             *                   <element name="Price">
+             *                     <simpleType>
+             *                       <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+             *                         <minInclusive value="0"/>
+             *                         <maxInclusive value="5000"/>
+             *                       </restriction>
+             *                     </simpleType>
+             *                   </element>
+             *                 </sequence>
+             *               </restriction>
+             *             </complexContent>
+             *           </complexType>
              *         </element>
              *       </sequence>
              *     </restriction>
@@ -712,81 +929,139 @@ public class AutoService {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "name",
-                "price"
+                "service"
             })
-            public static class Service {
+            public static class Services {
 
-                @XmlElement(name = "Name", required = true)
-                protected String name;
-                @XmlElement(name = "Price", required = true)
-                protected BigDecimal price;
+                @XmlElement(name = "Service", required = true)
+                protected List<AutoService.Orders.Order.Services.Service> service;
 
                 /**
-                 * Gets the value of the name property.
+                 * Gets the value of the service property.
+                 * 
+                 * <p>This accessor method returns a reference to the live list,
+                 * not a snapshot. Therefore any modification you make to the
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the service property.</p>
+                 * 
+                 * <p>
+                 * For example, to add a new item, do as follows:
+                 * </p>
+                 * <pre>
+                 * getService().add(newItem);
+                 * </pre>
+                 * 
+                 * 
+                 * <p>
+                 * Objects of the following type(s) are allowed in the list
+                 * {@link AutoService.Orders.Order.Services.Service }
+                 * </p>
+                 * 
                  * 
                  * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
+                 *     The value of the service property.
                  */
-                public String getName() {
-                    return name;
+                public List<AutoService.Orders.Order.Services.Service> getService() {
+                    if (service == null) {
+                        service = new ArrayList<>();
+                    }
+                    return this.service;
                 }
 
-                /**
-                 * Sets the value of the name property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setName(String value) {
-                    this.name = value;
-                }
 
                 /**
-                 * Gets the value of the price property.
+                 * <p>Java class for anonymous complex type</p>.
                  * 
-                 * @return
-                 *     possible object is
-                 *     {@link BigDecimal }
-                 *     
+                 * <p>The following schema fragment specifies the expected content contained within this class.</p>
+                 * 
+                 * <pre>{@code
+                 * <complexType>
+                 *   <complexContent>
+                 *     <restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+                 *       <sequence>
+                 *         <element name="Name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+                 *         <element name="Price">
+                 *           <simpleType>
+                 *             <restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
+                 *               <minInclusive value="0"/>
+                 *               <maxInclusive value="5000"/>
+                 *             </restriction>
+                 *           </simpleType>
+                 *         </element>
+                 *       </sequence>
+                 *     </restriction>
+                 *   </complexContent>
+                 * </complexType>
+                 * }</pre>
+                 * 
+                 * 
                  */
-                public BigDecimal getPrice() {
-                    return price;
-                }
+                @XmlAccessorType(XmlAccessType.FIELD)
+                @XmlType(name = "", propOrder = {
+                    "name",
+                    "price"
+                })
+                public static class Service {
 
-                /**
-                 * Sets the value of the price property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link BigDecimal }
-                 *     
-                 */
-                public void setPrice(BigDecimal value) {
-                    this.price = value;
+                    @XmlElement(name = "Name", required = true)
+                    protected String name;
+                    @XmlElement(name = "Price", required = true)
+                    protected BigDecimal price;
+
+                    /**
+                     * Gets the value of the name property.
+                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link String }
+                     *     
+                     */
+                    public String getName() {
+                        return name;
+                    }
+
+                    /**
+                     * Sets the value of the name property.
+                     * 
+                     * @param value
+                     *     allowed object is
+                     *     {@link String }
+                     *     
+                     */
+                    public void setName(String value) {
+                        this.name = value;
+                    }
+
+                    /**
+                     * Gets the value of the price property.
+                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link BigDecimal }
+                     *     
+                     */
+                    public BigDecimal getPrice() {
+                        return price;
+                    }
+
+                    /**
+                     * Sets the value of the price property.
+                     * 
+                     * @param value
+                     *     allowed object is
+                     *     {@link BigDecimal }
+                     *     
+                     */
+                    public void setPrice(BigDecimal value) {
+                        this.price = value;
+                    }
+
                 }
 
             }
 
         }
 
-    }
-
-
-    public void setClient(List<AutoService.Client> client) {
-        this.client = client;
-    }
-
-    public void setCar(List<AutoService.Car> car) {
-        this.car = car;
-    }
-
-    public void setOrder(List<AutoService.Order> order) {
-        this.order = order;
     }
 
 }
