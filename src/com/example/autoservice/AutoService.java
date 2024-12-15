@@ -3,8 +3,6 @@
 // See https://eclipse-ee4j.github.io/jaxb-ri 
 // Any modifications to this file will be lost upon recompilation of the source schema. 
 //
-
-
 package com.example.autoservice;
 
 import java.math.BigDecimal;
