@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <AutoService xmlns="http://example.com/auto-service">
-    <!-- Клієнти -->
     <Clients>
         <Client id="1">
             <Name>Іван Іванов</Name>
@@ -15,8 +13,6 @@
             <Phone>+380671112233</Phone>
         </Client>
     </Clients>
-
-    <!-- Автомобілі -->
     <Cars>
         <Car id="1">
             <Model>BMW X5</Model>
@@ -30,8 +26,6 @@
             <Model>Toyota Camry</Model>
         </Car>
     </Cars>
-
-    <!-- Замовлення -->
     <Orders>
         <Order id="1">
             <ClientId>1</ClientId>
